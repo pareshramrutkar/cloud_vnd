@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+
+    <body>
+        <h2>Image Slider</h2>
+        <div class="slider-container">
+            <img id="sliderImage" src="" alt="Slider Image">
+            <div class="frame"></div>
+        </div>
+        <div class="controls">
+            <button class="prev" onclick="prevImage()">Previous</button>
+            <button class="next" onclick="nextImage()">Next</button>
+        </div>
+        <script src="image1.js"></script>
+    </body>
+    
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .slider-container {
+            width: 450px;
+            height: 300px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: #fff;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 18px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .controls {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            color: white;
+            transition: background 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .prev {
+            background: #007bff;
+        }
+
+        .next {
+            background: #28a745;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .frame {
+            position: absolute;
+            top: -1.5px;
+            left: -1px;
+            width: 97%;
+            height: 96%;
+            border: 8px solid #fff;
+            border-radius: 15px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+</html>
